@@ -1,14 +1,19 @@
-<php>
+<?php
+# Variable import
+
+require('creds.php');
+
+
 # Select an API and endpoint to get started.
 
 use Square\SquareClient;
 
 $config = [
-    'accessToken' => 'EAAAl-JOx8LoptZpMpwdr_D2kJnR_3iBMaYwk0X9oJtdR2R2sKdPtS99Xl_vSQii',
+    'accessToken' => $accessToken,
     'environment' => 'sandbox'
 ];
 $client = new SquareClient($config);
-<php?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

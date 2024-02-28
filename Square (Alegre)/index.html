@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+
+<html lang="es"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <title>Verificar Conexión con Square API</title> 
+
+</head> 
+
+<body> 
+
+    <button id="checkConnectionBtn">Verificar Conexión a Square</button> 
+
+    <p id="connectionStatus"></p> 
+
+ 
+
+    <script> 
+
+        document.getElementById('checkConnectionBtn').addEventListener('click', function() { 
+
+            fetch('/check-connection') 
+
+                .then(response => response.json()) 
+
+                .then(data => { 
+
+                    document.getElementById('connectionStatus').textContent = data.message; 
+
+                }) 
+
+                .catch(error => { 
+
+                    console.error('Error:', error); 
+
+                    document.getElementById('connectionStatus').textContent = 'Error al realizar la solicitud.'; 
+
+                }); 
+
+        }); 
+
+    </script> 
+
+</body> 
+
+
+</html> 

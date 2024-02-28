@@ -1,0 +1,10 @@
+CREATE DATABASE square;
+USE square;
+
+CREATE TABLE productos(
+    ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL;
+    Nombre STRING(30) NOT NULL;
+    Descripcion STRING(100) DEFAULT NULL;
+    Precio FLOAT NOT NULL
+);
+
